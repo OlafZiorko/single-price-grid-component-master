@@ -1,0 +1,199 @@
+:root {
+  /* COLOR PALLET */
+  --clr-cyan: hsl(179, 62%, 43%);
+  --clr-light-cyan: hsla(179, 65%, 45%, 0.719);
+  --clr-yellow: hsl(71, 73%, 54%);
+  --clr-grey: hsl(218, 22%, 67%);
+  --clr-light-grey: hsl(204, 43%, 93%);
+
+  /*FONTS AND WEIGHTS */
+  --fnt-fm: "Karla", sans-serif;
+  --fnt-wght-200: 200;
+  --fnt-wght-400: 400;
+  --fnt-wght-700: 700;
+}
+*,
+*::backdrop,
+*::after {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: var(--fnt-fm);
+}
+body {
+  background-color: var(--clr-light-grey);
+  font-size: 62.5%;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+.card__wrapper {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 650px;
+}
+/* HEADER SECTION */
+.card__header {
+  background-color: white;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  padding: 1.6rem 1.5rem;
+}
+h1 {
+  font-size: 1.3rem;
+  font-weight: var(--fnt-wght-700);
+  color: var(--clr-cyan);
+  margin-bottom: 1.4rem;
+}
+.card__header strong {
+  color: var(--clr-yellow);
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+.card__header p {
+  color: var(--clr-grey);
+  font-size: 0.888rem;
+  font-family: var(--fnt-fm);
+  font-weight: var(--fnt-wght-400);
+  line-height: 1.85;
+  margin-bottom: 0.4rem;
+}
+/* SIGNIN SECTION */
+.card__signIn {
+  background-color: var(--clr-cyan);
+  color: white;
+  padding: 1.5rem;
+}
+.card__signIn h2 {
+  font-size: 1.2rem;
+  font-weight: var(--fnt-wght-400);
+  margin-bottom: 1.2rem;
+}
+.card__signIn .price {
+  display: inline-block;
+  font-size: 1.9rem;
+  font-weight: var(--fnt-wght-700);
+  margin-right: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+.plan--duration {
+  display: inline-block;
+  font-size: 0.93rem;
+  font-weight: var(--fnt-wght-200);
+  opacity: 0.9;
+  transform: translateY(-35%);
+  letter-spacing: 1px;
+}
+.card__signIn .signIn--description {
+  font-size: 0.95rem;
+  font-weight: var(--fnt-wght-200);
+  letter-spacing: 1px;
+  margin-bottom: 1.8rem;
+}
+.btn {
+  background-color: var(--clr-yellow);
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-size: 0.92rem;
+  font-weight: var(--fnt-wght-400);
+  padding: 0.95em;
+  outline: none;
+  width: 100%;
+  -webkit-box-shadow: 1px 9px 29px -3px rgba(45, 132, 130, 0.76);
+  -moz-box-shadow: 1px 9px 29px -3px rgba(45, 132, 130, 0.76);
+  box-shadow: 1px 9px 29px -3px rgba(45, 132, 130, 0.76);
+}
+/*FOOTER SECTION */
+.card__footer {
+  background-color: var(--clr-light-cyan);
+  padding: 1.5rem;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+.card__footer h3 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: var(--fnt-wght-400);
+  margin-bottom: 1rem;
+}
+.card__footer__list li a {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: var(--fnt-wght-200);
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 1440px) {
+  .card__wrapper {
+    max-width: 750px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 215px 260px;
+    grid-template-areas:
+      "header header"
+      "main footer";
+  }
+  /* HEADER SECTION */
+  .card__header {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding: 2.5rem 2.2rem 2.2rem 2.5rem;
+    grid-area: header;
+  }
+  h1 {
+    font-size: 1.55rem;
+    margin-bottom: 1.4rem;
+  }
+  .card__header strong {
+    font-size: 1.15rem;
+    margin-bottom: 0.55rem;
+  }
+  .card__header p {
+    font-size: 1rem;
+    line-height: 1.55;
+    margin-bottom: 0;
+  }
+  /* SIGNIN SECTION */
+  .card__signIn {
+    border-bottom-left-radius: 0.5rem;
+    grid-area: main;
+    padding: 2.5rem 2.2rem 2.2rem 2.5rem;
+  }
+  .card__signIn h2 {
+    font-size: 1.2rem;
+    font-weight: var(--fnt-wght-400);
+    margin-bottom: 1.2rem;
+  }
+  .card__signIn .price {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .plan--duration {
+    font-size: 1rem;
+  }
+  .card__signIn .signIn--description {
+    font-size: 0.9rem;
+
+    letter-spacing: 1px;
+    margin-bottom: 1.85rem;
+  }
+  .btn {
+    font-size: 0.96rem;
+    padding: 1em;
+  }
+  /*FOOTER SECTION */
+  .card__footer {
+    padding: 2.4rem 2.2rem 2.2rem 2.5rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0.5rem;
+    grid-area: footer;
+  }
+}
